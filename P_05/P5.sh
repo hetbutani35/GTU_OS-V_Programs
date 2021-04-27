@@ -1,20 +1,13 @@
-#shell script to print prime numbers
+#Factorial of given number
 
-echo "Enter the number upto which you want Prime numbers : "
+echo "Enter value of N"
 read n
 
-for ((i=1;i<=n;i++))
+fact=1
+
+while [ $n -ne 0 ]
 do
-	flag=0
-	for((j=2;j<i;j++))
-	do
-		if [ `expr $i % $j` -eq 0 ]
-		then
-			flag=1
-		fi
-	done
-	if [ $flag -eq 0 ]
-	then 
-		echo $i
-	fi
+	fact=`expr $fact \* $n`
+	n=`expr $n - 1`
 done
+echo "Factorial = " $fact
