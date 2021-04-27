@@ -1,13 +1,13 @@
 #shell script to print multiplication table of given number
 
-echo "Enter value of N"
+echo "Enter the number N : "
 read n
 
-fact=1
+flag=1
 
-while [ $n -ne 0 ]
+while [ $flag -ne 11 ]
 do
-	fact=`expr $fact \* $n`
-	n=`expr $n - 1`
+	total=`expr $n \* $flag`
+	echo $n " * " $flag " = " $total
+	flag=`expr $flag + 1`
 done
-echo "Factorial = " $fact
